@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Plantilla OT - Carben Pro</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        .header { text-align: center; border: 2px solid #000; padding: 15px; background: #f0f0f0; }
+        .company { font-size: 18px; font-weight: bold; }
+        .title { font-size: 16px; text-decoration: underline; }
+        .section { border: 1px solid #000; padding: 15px; margin: 15px 0; }
+        .field { display: flex; margin: 8px 0; }
+        .label { font-weight: bold; min-width: 150px; }
+        .value { border-bottom: 2px solid #000; min-width: 250px; padding: 3px; }
+        .highlight { background: yellow; }
+        .terms { border: 2px solid red; padding: 20px; background: #ffe6e6; }
+        .terms-title { font-weight: bold; text-align: center; color: white; background: red; padding: 10px; }
+        .terms-list { list-style-type: none; }
+        .terms-list li { margin: 10px 0; padding: 8px; border-left: 3px solid blue; }
+        .signature { display: flex; justify-content: space-between; margin-top: 30px; }
+        .sig-box { width: 45%; border: 2px solid #000; padding: 15px; text-align: center; }
+        .sig-line { border-bottom: 2px solid #000; margin: 20px 0; height: 30px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="company">Carben Pro S.A. de C.V.</div>
+        <div class="title">PLANTILLA DE ENTRADA DE ORDEN DE TRABAJO</div>
+    </div>
+
+    <div class="section">
+        <h3>INFORMACIÓN DE LA ORDEN</h3>
+        <div class="field"><span class="label">Sucursal:</span><span class="value highlight">{{sucursal}}</span></div>
+        <div class="field"><span class="label">Prioridad:</span><span class="value">{{prioridad}}</span></div>
+        <div class="field"><span class="label">Técnico responsable:</span><span class="value">{{tecnico}}</span></div>
+        <div class="field"><span class="label">Folio OT:</span><span class="value">{{folio_ot}}</span></div>
+        <div class="field"><span class="label">Fecha de registro:</span><span class="value">{{fecha_registro}}</span></div>
+    </div>
+
+    <div class="section">
+        <h3>INFORMACIÓN DE CONTACTO</h3>
+        <div class="field"><span class="label">Cliente/Nombre:</span><span class="value">{{cliente}}</span></div>
+        <div class="field"><span class="label">Teléfono:</span><span class="value">{{telefono}}</span></div>
+        <div class="field"><span class="label">Email:</span><span class="value">{{email}}</span></div>
+        <div class="field"><span class="label">Fotografías:</span><span class="value">{{fotografias}}</span></div>
+    </div>
+
+    <div class="terms">
+        <div class="terms-title">TÉRMINOS Y CONDICIONES - ACEPTO Y CONFORME</div>
+        <ol class="terms-list">
+            <li>1. Este documento será válido con sello y firma del establecimiento.</li>
+            <li>2. Este documento servirá como contra recibo de su equipo que ampara el ingreso.</li>
+            <li>3. Toda garantía tendrá una vigencia de 7 días naturales sobre las partes reemplazadas.</li>
+            <li>4. Cargo de almacenaje: <strong>$200 pesos diarios</strong> después de 30 días.</li>
+            <li>5. Se requiere pago por servicio de revisión previamente al diagnóstico.</li>
+            <li>6. El cliente debe presentar documentos que acrediten la compra del equipo.</li>
+            <li>7. El cliente deslinda a Carben Pro S.A. de C.V. de cualquier reclamación.</li>
+            <li>8. El cliente deslinda a Carben Pro S.A. de C.V. de cualquier circunstancia ilícita.</li>
+            <li>9. El cliente acepta automáticamente todas las condiciones al ingresar el equipo.</li>
+            <li>10. Acepto que las fotografías anexadas corresponden al estado real del equipo.</li>
+        </ol>
+    </div>
+
+    <div class="signature">
+        <div class="sig-box">
+            <div class="sig-line"></div>
+            <p><strong>FIRMA DEL CLIENTE</strong></p>
+            <p>Nombre: {{cliente}}</p>
+        </div>
+        <div class="sig-box">
+            <div class="sig-line"></div>
+            <p><strong>SELLO DEL ESTABLECIMIENTO</strong></p>
+            <p>Carben Pro S.A. de C.V.</p>
+        </div>
+    </div>
+</body>
+</html>
